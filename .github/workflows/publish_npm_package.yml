@@ -35,7 +35,7 @@ jobs:
         # git config --global user.email "${{ GITHUB_ACTOR }}@users.noreply.github.com"
         # git commit --amend -m 'Update version number'
         # git push --force
-        run: gh pr create -B main -H ${{ github.base_ref }} --title 'Update version number' --body 'Created by Github action'
+        run: gh pr create -B main -H ${{ github.ref }} --title 'Update version number' --body 'Created by Github action'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
